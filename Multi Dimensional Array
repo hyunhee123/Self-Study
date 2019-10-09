@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+//Create multi dimensional array that save 3 students information.
+//The information that you need to save is
+//FirstName
+//LastName
+//Fill the array with any random names
+//print on screen last name for each student.
+namespace ClassPractice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[,] stud = new string[3, 2];
+            stud[0, 0] = "Hyunhee";
+            stud[0, 1] = "Cho";
+            stud[1, 0] = "Steve";
+            stud[1, 1] = "Martinez";
+            stud[2, 0] = "Olaf";
+            stud[2, 1] = "Milkovski";
+
+            
+            Console.WriteLine("Lastname for first student: " + stud[0, 1]);
+            
+            Console.WriteLine("Lastname for second student: " + stud[1, 1]);
+            
+            Console.WriteLine("Lastname for third student: " + stud[2, 1]);
+            Console.ReadLine();
+        }
+    }
+}
