@@ -1,0 +1,84 @@
+using System;
+// Create Collection Namespace
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assignment3
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            // ArrayList is in Collection Namespace.
+            // Create a new ArrayList collection.
+            ArrayList beverages = new ArrayList();
+            // Create some items to add to the collection.
+            Coffee coffee1 = new Coffee(4, "Arabica", "Columbia");
+            Coffee coffee2 = new Coffee(3, "Arabica", "Vietnam");
+            Coffee coffee3 = new Coffee(4, "Robusta", "Indonesia");
+            // Add the items to the collection.
+            // Items are implicitly cast to the Object type when you add them. 
+            beverages.Add(coffee1);
+            beverages.Add(coffee2);
+            beverages.Add(coffee3);
+            // Retrieve items from the collection.
+            // Items must be explicitly cast back to their original type.
+            Coffee firstCoffee = (Coffee)beverages[0];
+            Coffee secondCoffee = (Coffee)beverages[1];
+            // How to iterate over an ArrayList collection
+            foreach (Coffee c in beverages)
+            {
+                Console.WriteLine("Bean type: {0}", c.Bean);
+                Console.WriteLine("Country of origin: {0}", c.CountryOfOrigin);
+                Console.WriteLine("Strength (1-5): {0}", c.Strength);
+            }
+            
+
+            // Create a new Hashtable collection.
+            // Hashtable is in Collection Namespace.
+            Hashtable ingredients = new Hashtable();
+            // Add some key/value pairs to the collection.
+            ingredients.Add("Café au Lait", "Coffee, Milk");
+            ingredients.Add("Café Mocha", "Coffee, Milk, Chocolate");
+            ingredients.Add("Cappuccino", "Coffee, Milk, Foam");
+            ingredients.Add("Irish Coffee", "Coffee, Whiskey, Cream, Sugar");
+            ingredients.Add("Macchiato", "Coffee, Milk, Foam");
+            // Check whether a key exists.
+            if (ingredients.ContainsKey("Café Mocha"))
+            {
+            // Retrieve the value associated with a key.
+            Console.WriteLine("The ingredients of a Café Mocha are: {0}", ingredients["Café Mocha"]);
+            }
+            // iterate over the keys in a Hashtable collection and retrieve the value associated with each key
+            foreach (string key in ingredients.Keys)
+            {
+            // For each key in turn, retrieve the value associated with the key.
+            Console.WriteLine("The ingredients of a {0} are {1}", key, ingredients[key]);
+            }
+            Console.ReadLine();
+        }
+
+        // Create a Coffee class
+        public class Coffee
+        {
+
+            // Create a Coffee constructor
+            public Coffee(int v1, string v2, string v3)
+            {
+                // Initalized three parameters
+                Strength = v1;
+                Bean = v2;
+                CountryOfOrigin = v3;
+            }
+            // Create properties and data
+            // get and set can read and write
+            public string Bean { get; set; }
+            public string CountryOfOrigin { get; set; }
+            public int Strength { get; set; }    
+        }
+    }
+}
