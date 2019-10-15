@@ -1,0 +1,14 @@
+def hex_to_dec(hex):
+    sum = 0
+    i = len(hex) - 1
+    my_dict = {'A':10,'B':11,'C':12,'D':13,'E':14,'F':15}
+    for char in hex:
+        if(char.isdigit()):
+            sum += int(char) * pow(16,i)
+        else:
+            char=my_dict[char]
+            sum += int(char) * pow(16,i)
+        i -= 1
+    return sum
+print(hex_to_dec('54AE7'))
+print(hex_to_dec('23FF'))
