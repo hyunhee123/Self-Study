@@ -1,0 +1,23 @@
+h=[str(i) for i in range(10)]+["A","B","C","D","E","F"]
+def hexa(dec):
+    s=" "
+    while dec:
+        s+=h[dec%16]
+        dec//=16
+    return s[::-1]
+print(hexa(23665))
+print(hexa(65537))
+
+
+
+##Different Method
+def function(dec):
+hex_dict={'0':0,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'A':10,'B':11,'C':12,'D':13,'E':14,'F':15}
+sum = str()
+  while dec > 0:
+  rem - dec%16
+    if rem in hex_dict:
+    sum += hex_dict[rem]
+    dec = dec//16
+  sum[::-1]
+return sum
