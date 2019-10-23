@@ -1,0 +1,138 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SearchingSorting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] vals =  { 42, 11, 6, 7, 59, 205, -2, 10};
+            Console.WriteLine(LinearSearch(vals, 50));
+
+            int[] sortedVals = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            Console.WriteLine(BinarySearch(sortedVals, 7));
+            Console.WriteLine(LinearSearch(sortedVals, 8));
+            Console.WriteLine(BinarySearch(vals, 42)); //do not use binary search on unsorted arrays!!!
+
+            BubbleSort(vals);
+
+            BubbleSortBetter(vals);
+
+            BubbleSort(sortedVals);
+            Console.WriteLine();
+            BubbleSortBetter(sortedVals);
+
+        }
+        /// <summary>
+        /// MSSA: this method with search for a value in a given array
+        /// </summary>
+        /// <param name="arr">MSSA: this is the array in which we will search for a value</param>
+        /// <param name="value">MSSA: this is the value we are searching for</param>
+        /// <returns>MSSA: the index in the array where value is located, -1 if not found</returns>
+        public static int LinearSearch(int[] arr, int value)
+        {
+            int idx = -1;
+
+            //go through array
+            for (int i = 0; i < arr.Length && idx ==-1; i++)
+            {
+                if (arr[i] == value)
+                    idx = i;
+            }
+            return idx;
+        }
+
+        public static int BinarySearch(int[] arr, int value)
+        {
+            int left = 0;
+            int right = arr.Length - 1;
+
+            while (left <= right)
+            {
+                int middle = (left + right) / 2;
+
+                if (arr[middle] == value)
+                    return middle;
+                else if (arr[middle] > value)
+                    right = middle - 1;
+                else //(arr[middle] < value)
+                    left = middle + 1;
+            }
+            return -1;
+        }
+        public static int BinarySearchRec(int[] arr, int value)
+        {
+          return BinarySearchRec(arr, value, 0, arr.Length -1);
+    }
+
+        public static int BinarySearchRec(int[] arr, int value, int left, int right)
+        {
+            
+            if (left <= right)
+            {
+                int middle = (left + right) / 2;
+
+                if (arr[middle] == value)
+                    return middle;
+                else if (arr[middle] > value)
+                    BinarySearchRec(arr, value, left, middle - 1); //right = middle - 1;
+                else //(arr[middle] < value)
+                    BinarySearchRec(arr, value, middle + 1, right); //left = middle + 1;
+            }
+            return -1;
+        }
+
+        public static void BubbleSort(int[] arr)
+        {
+            for(int j = 0; j<arr.Length -1; j++)
+            {
+                PrintArr((arr));
+                for (int i = 0; i < arr.Length - 1 -j; i++)
+                {
+                    
+                    if (arr[i] > arr[i + 1])
+                    {
+                        int tmp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = tmp;
+                    }
+                }
+            }
+            
+        }
+
+        public static void BubbleSortBetter(int[] arr)
+        {
+            for (int j = 0; j < arr.Length - 1; j++)
+            {
+                bool wasSwapped = false;
+                PrintArr((arr));
+                for (int i = 0; i < arr.Length - 1 - j; i++)
+                {
+
+                    if (arr[i] > arr[i + 1])
+                    {
+                        int tmp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = tmp;
+                        wasSwapped = true;
+                    }
+                    if (wasSwapped == false)
+                        return; //the array is sorted
+                }
+            }
+
+        }
+        public static void PrintArr(int[] arr)
+{
+    foreach (var val in arr)
+        Console.Write(val + " ");
+
+    Console.WriteLine();
+}
+    }
+}
