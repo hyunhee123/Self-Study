@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Full Gospel Holy Light Church</title>
+
+    <style>
+    div {background-color:#b66161; border:5px solid #ff6a00;}
+    h1 {background-color:#ffd800;}
+    li {color: #4cff00;}
+    p{
+        background-color:#ff0000;
+        font-weight:bold;
+    }
+    * 이거는 전체 선택자
+    * {
+        margin: 0;
+            padding: 0;
+
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Full Gospel Holy Light Church</h1>
+        Welcome
+        <hr />
+    </header>
+    <div>
+        <h1>Full Gospel</h1>
+    </div>
+    
+    <nav>
+        <p>Menu List</p>
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+        </ul>
+        <hr />
+    </nav>
+
+    <section>
+        <p>Location</p>
+        <ol>
+            <li>Seattle</li>
+            <li>New York City</li>
+            <li>Lakewood</li>
+            <li>Federal way</li>
+            <li>Bellevue</li>
+        </ol>
+        <p>
+            <ol>
+                <li><a href="http://gbcseattle.com/sermon_08" target="_blank">Sermon</a></li>
+                <li><a href="https://www.facebook.com/pages/Full-Gospel-Holy-Light-Church/303792933053749?rf=157218104323290" target="_self">Facebook</a></li>
+            </ol>
+        </p>
+        <dl>
+            <dt>Hi</dt>
+            <dd>Hola</dd>
+            <dd>Nihao</dd>
+        </dl>
+        <hr />
+    </section>
+    
+    <footer>
+        <p><img src="subscribe.png" width="100" height="50" alt="Subscribe"</p>
+
+        <audio src="Believer.mp3" controls="controls" autoplay="autoplay" loop="loop"></audio>
+
+        <table width="300" border="1">
+            <tr>
+                <td>
+                    <h1>Songs</h1>
+                    <hr />
+                    <ol>
+                        <li><img scr="" alt="" /><a href="#none">집 안에</a></li>
+                        <li><img scr="" alt="" /><a href="#none">집 안에</a></li>
+                        <li><img scr="" alt="" /><a href="#none">집 안에</a></li>
+                        <li><img scr="" alt="" /><a href="#none">집 안에</a></li>
+                    </ol>
+                    <p><audio src="Believer.mp3" controls="controls" autoplay="autoplay" loop="loop"></audio></p>
+                </td>
+            </tr>
+        </table>
+    <hr />
+    </footer>
+
+    <video src="Black Friday (11.22.2018).mp4" width="350" height="200" controls="controls" type="video/mp4">
+    </video>
+
+    <form action="#" method="get">
+        Name: <input type="text" name="uname" /><br />
+        ID: <input type="text" name="uid" /><br />
+        Password: <input type="password" name="upw" /><br />
+        Phone number: <input type="text" name="uphone1" size="5" /> -
+        <input type="text" name="uphone2" size="5" /> -
+        <input type="text" name="uphone3" size="5" /><br />
+        Photo: <input type="file" name="upic" /><br />
+        Gender: <input type="radio" name="gender" value="m" />Male,
+        <input type="radio" name="gender" value="w" />Female <br />
+        Language: <input type="checkbox" name="lan" value="kor" checked="checked" />Korea,
+        <input type="checkbox" name="lan" value="eng" checked="checked" />English,
+        <input type="checkbox" name="lan" value="chi" checked="checked" />Chinese<br />
+        About you: <textarea rows="5" cols="20">Introduce yourself</textarea>
+        Nationality: <select>
+            <option>Korea</option>
+            <option>USA</option>
+            <option>China</option>
+        </select><br />
+        Favorite Food: <select multiple="multiple">
+            <option>Kimchi</option>
+            <option>Bulgogi</option>
+            <option>Gimbab</option>
+        </select><br />
+        <input type="submit" />
+    </form>
+
+
+    <div>block_01</div>
+    <div>block_02</div>
+    <div>block_03</div>
+    <div>block_04</div>
+    <div>block_05</div>
+
+    <br /><br />
+
+    <span>inline_01</span>
+    <span>inline_02</span>
+    <span>inline_03</span>
+    <span>inline_04</span>
+    <span>inline_05</span>
+
+
+
+</body>
+</html>
