@@ -1,3 +1,4 @@
 Created Intro using Premiere Pro!
 
-![Tacoma Deluna](https://user-images.githubusercontent.com/45709768/69315156-b844f080-0bea-11ea-83e9-01b0c98990c4.gif)
+![Deluna](https://user-images.githubusercontent.com/45709768/69315296-ffcb7c80-0bea-11ea-8a77-f4eb716db0b4.gif)
+
