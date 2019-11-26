@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TotalNumbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string mixStr = "63d9(2jd91202!w8";
+            Console.WriteLine(ExtractInt(mixStr));
+        }
+        public static int ExtractInt(string str)
+        {
+            string digitStr = "0123456789";
+            int sum = 0;
+
+            
+            for(int i = 0; i < str.Length; i++)
+            {
+                if (digitStr.Contains(str[i]))
+                {
+                    sum += int.Parse(str[i].ToString());
+                }
+
+            }
+            return sum;
+
+
+        }
+    }
+}
